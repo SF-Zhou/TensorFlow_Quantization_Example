@@ -25,7 +25,3 @@ for _ in range(1000):
 
 saver = tf.train.Saver()
 saver.save(sess, './local.ckpt')
-
-with open('train.pb', 'w') as f:
-    g = tf.get_default_graph()
-    f.write(str(g.as_graph_def()))
