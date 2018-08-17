@@ -19,7 +19,7 @@ tf.contrib.quantize.create_training_graph()
 sess.run(tf.global_variables_initializer())
 train_step = tf.train.GradientDescentOptimizer(0.5).minimize(cross_entropy)
 
-for _ in range(1000):
+for _ in range(10000):
     batch = mnist.train.next_batch(100)
     sess.run(train_step, feed_dict={x: batch[0], y_: batch[1]})
 
